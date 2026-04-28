@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cotizador</title>
+</head>
+<body>
+    <div id="container">
+        <img src="bitcoin.svg" alt="">
+        <div id="coin-container">
+            <form id="coin-form">
+                <div class="coin-input-container">
+                    <label for="coin">Elige una Moneda</label>
+                    <select class="coin-input" id="coin">
+                        <option selected disabled value="">Selecciona una moneda</option>
+                        <option value="USD">Dolar</option>
+                        <option value="EUR">Euros</option>
+                        <option value="VES">Bolivares</option>
+                    </select>
+                </div>
+                <div class="coin-input-container">
+                    <label for="crypto">Elige una Criptomoneda</label>
+                    <select class="coin-input" id="crypto">
+                        <option selected disabled value="">Selecciona una criptomoneda</option>
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="AXS">AXS</option>
+                        <option value="BNB">Binance Coin</option>
+                    </select>
+                </div>
+                <div class="coin-input-container">
+                    <label for="amount">Ingrese la cantidad a calcular</label>
+                    <input type="number" class="coin-input" id="amount" placeholder="Monto a cotizar...">
+                </div>
+                <button id="form-btn" type="submit">COTIZAR</button>
+            </form> 
+            <div id="coin-info"></div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
