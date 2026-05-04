@@ -6,15 +6,15 @@ const coinInfo = document.querySelector('#coin-info')
 
 form.addEventListener('submit', async e => {
     e.preventDefault(); //que hace el preventDeFault
-    const coinSelected = [...coin.children].find(option => option.selected);
-    const cryptoSelected = [...crypto.children].find(option => option.selected);
+    const coinSelected = [...coin.children].find(coin => coin.selected).value;
+    const cryptoSelected = [...crypto.children].find(crypto => crypto.selected).value;
     const amountValue = amount.value;
 
     try {
         coinInfo.innerHTML = `
         <span class="loader"></span>
         `;
-        const response = await (await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoSelected}&tsyms=${coinSelected}`)).json();
+        const response = await (await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD`)).json();
         const price = response.DISPLAY[cryptoSelected.value][coinSelected.value].PRICE;
         const priceHigh = response.DISPLAY[cryptoSelected.value][coinSelected.value].HIGH24HOUR;
         const priceLow = response.DISPLAY[cryptoSelected.value][coinSelected.value].LOW24HOUR;
