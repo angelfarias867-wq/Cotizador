@@ -101,6 +101,35 @@ img {
   animation: shadowRolling 2s linear infinite;
 }
 
+.github-footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.github-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white; /* Color del texto */
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.github-footer a:hover {
+    opacity: 0.7;
+}
+
+.github-icon {
+    width: 30px;
+    height: 30px;
+    /* Este filtro convierte el logo negro en blanco */
+    filter: brightness(0) invert(1);
+}
+
 @keyframes shadowRolling {
   0% {
     box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);

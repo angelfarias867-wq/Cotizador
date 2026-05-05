@@ -20,7 +20,7 @@ form.addEventListener('submit', async e => {
         coinInfo.innerHTML = `
         <span class="loader"></span>
         `;
-console.log(price);
+        
         if (amountValue !== '') {
             const result = Number(amountValue) / rawPrice;
             coinInfo.innerHTML = `
