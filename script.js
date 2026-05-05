@@ -11,7 +11,7 @@ form.addEventListener('submit', async e => {
     const amountValue = amount.value;
     
     try {
-        const response = await (await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD`)).json();
+        const response = await (await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoSelected}&tsyms=${coinSelected}`)).json();
         const price = response.DISPLAY[cryptoSelected.value][coinSelected.value].PRICE;
         const rawPrice = response.RAW[cryptoSelected.value][coinSelected.value].PRICE;
         const priceHigh = response.DISPLAY[cryptoSelected.value][coinSelected.value].HIGH24HOUR;
